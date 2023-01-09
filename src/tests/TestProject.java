@@ -3,10 +3,11 @@ package tests;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import site.Activity;
-import site.Schedule;
+import models.Activity;
+import models.Catalogue;
+import models.Schedule;
 
-public class TestSchedule {
+public class TestProject {
 
 	public static void main(String[] args) {
 		// Test slots generation
@@ -31,6 +32,8 @@ public class TestSchedule {
 			System.out.println(line.getDate());
 			System.out.println(line.getSlots());
 		}
+		
+		Catalogue catalogue = new Catalogue();
 	}
 
 	

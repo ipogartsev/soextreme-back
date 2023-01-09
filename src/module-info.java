@@ -6,4 +6,5 @@
  *
  */
 module SOEXTREME {
+	requires java.desktop;
 }

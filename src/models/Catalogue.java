@@ -1,4 +1,4 @@
-package site;
+package models;
 
 import java.util.ArrayList;
 
@@ -14,8 +14,17 @@ public class Catalogue{
     public Catalogue() {
     	this.catalogue = new ArrayList<Activity>();
     }
+    public Catalogue(ArrayList<Activity> activity) {
+    	this.catalogue = activity;
+    }
     
-    // Ajout une activité dans catalogue
+    public ArrayList<Activity> getCatalogue() {
+		return catalogue;
+	}
+	public void setCatalogue(ArrayList<Activity> catalogue) {
+		this.catalogue = catalogue;
+	}
+	// Ajout une activité dans catalogue
     public void addActivity(Activity activity) {
     	this.catalogue.add(activity);
     }
