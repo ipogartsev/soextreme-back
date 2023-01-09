@@ -1,30 +1,41 @@
 package site;
 
 import java.time.LocalTime;
-
+/**
+ * Class Slot - un creneau pour date et pour activité
+ * @author Irina
+ *
+ */
 public class Slot {
+	// --- VARIABLES
+	// id de creneau
 	private int id;
-	private LocalTime startHour;  
+	// Heure de debut de creneau
+	private LocalTime startHour; 
+	// Durée de creneau en minutes
 	private int duration;
+	// Nombre de places disponible pour creneau
 	private int numSeatsAvailable = 0;
+	// Creneau creuse si true, à default creneau plein tarif
 	private boolean offPeakHour = false;
+	// Id de monitor affecté pour creneau
 	private int idMonitor = 0;
+	// Id d'operator affecté pour creneau
     private int idOperator = 0;
 
 	// CONSTRUCTORS
-	public Slot(int id, LocalTime startHour, int duration, int numSeatsAvailable, boolean offPeakHour) {
+    public Slot(int id, LocalTime startHour, int duration) {
+    	this.id = id;
+    	this.startHour = startHour;
+    	this.duration = duration;   	
+    }
+	public Slot(int id, LocalTime startHour, int duration, int numSeatsAvailable) {
 		this.id = id;
 		this.startHour = startHour;
 		this.duration = duration;
 		this.numSeatsAvailable = numSeatsAvailable;
-		this.offPeakHour = offPeakHour;
 	}
-	public Slot(int id, LocalTime startHour, int duration) {
-		this.id = id;
-		this.startHour = startHour;
-		this.duration = duration;
-		
-	}
+	
 
 	public boolean isOffPeakHour() {
 		return offPeakHour;
